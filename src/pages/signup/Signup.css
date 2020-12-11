@@ -1,0 +1,18 @@
+.signup_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup_container from {
+  width: 80%;
+}
+
+.title {
+  color: #212121;
+}
+
+.register {
+  color: #00a1d6;
+}
+
