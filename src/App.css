@@ -1,0 +1,56 @@
+@import './styles/reset.css';
+
+.nav_container {
+  background-color: #0d6efd;
+  height: 70px;
+  line-height: 70px;
+  display: flex;
+  flex-direction: row;
+  padding: 0 80px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.nav_container ul li {
+  display: inline-block;
+}
+
+.nav_container ul li:last-child {
+  margin: 0 10px;
+}
+
+.container {
+  margin-top: 10px;
+}
+
+.container .left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .bg {
+  width: 70%;
+}
+
+.content {
+  margin-bottom: 10px;
+}
+
+a {
+  color: #999;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+a:hover,
+a:link,
+a:active {
+  color: #999;
+  text-decoration: none;
+}
