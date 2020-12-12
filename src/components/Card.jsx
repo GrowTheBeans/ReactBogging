@@ -32,11 +32,11 @@ class Card extends Component {
           {
             this.state.list.map(item =>
               <div className="col-sm col-6 col-md-4" key={item._id}>
-                <div className="card vh-100 shadow p-3 mb-5 bg-white rounded">
+                <div className="card card-box shadow p-3 mb-5 bg-white rounded">
                   <img src={item.avatar.url} className="card-img-top rounded-circle border border-info" alt="..." />
                   <p className="h5 font-weight-bolder mt-3 text-info">{item.title}</p>
                   <p className="font-italic text-danger">{item.createdAt}</p>
-                  <div className="card-body">
+                  <div className="card-body card-description">
                     <p className="font-weight-light text-secondary">{item.description}</p>
                   </div>
                   <button type="button" className="btn btn-outline-info btn-sm" onClick={this.onColumnsList}>进入专栏</button>
