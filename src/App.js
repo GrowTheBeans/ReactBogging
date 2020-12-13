@@ -17,28 +17,28 @@ function App() {
           <img src={login} width="30" height="30" className="d-inline-block align-top" alt="login" loading="lazy" />
           <span>LOGIN</span>
         </Link>
-        <ul>
-          <li>
-            <Link to="/login">
-              <button type="button" className="btn btn-outline-light">登录</button>
-            </Link>
-          </li>
-          <li>
-            <Link to="/signup">
-              <button type="button" className="btn btn-outline-secondary">注册</button>
-            </Link>
-          </li>
-        </ul>
-        {/* <div className="dropdown dropleft"> */}
-        {/* <button className="btn btn-outline-warning dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">粽子</button> */}
-        {/* <div className="dropdown-menu menu-containers" aria-labelledby="dropdownMenu2"> */}
-        {/* <span className="dropdown-item font-weight-light">个人详情页</span> */}
-        {/* <span className="dropdown-item font-weight-light">简书</span> */}
-        {/* <span className="dropdown-item font-weight-light">EChart</span> */}
-        {/* <div className="dropdown-divider"></div> */}
-        {/* <span className="dropdown-item font-weight-light text-primary">退出</span> */}
-        {/* </div> */}
-        {/* </div> */}
+        {/* <ul> */}
+        {/* <li> */}
+        {/* <Link to="/login"> */}
+        {/* <button type="button" className="btn btn-outline-light">登录</button> */}
+        {/* </Link> */}
+        {/* </li> */}
+        {/* <li> */}
+        {/* <Link to="/signup"> */}
+        {/* <button type="button" className="btn btn-outline-secondary">注册</button> */}
+        {/* </Link> */}
+        {/* </li> */}
+        {/* </ul> */}
+        <div className="dropdown dropleft">
+          <button className="btn btn-outline-warning dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">粽子</button>
+          <div className="dropdown-menu menu-containers" aria-labelledby="dropdownMenu2">
+            <span className="dropdown-item font-weight-light">个人详情页</span>
+            <span className="dropdown-item font-weight-light">简书</span>
+            <span className="dropdown-item font-weight-light">EChart</span>
+            <div className="dropdown-divider"></div>
+            <span className="dropdown-item font-weight-light text-primary">退出</span>
+          </div>
+        </div>
       </nav>
       <div className="container">
         <Switch>
@@ -67,7 +67,7 @@ function App() {
             <ColumnsList />
           </Route>
           <Route path="/todolist">
-            <TodoList/>
+            <TodoList />
           </Route>
         </Switch>
       </div>

@@ -20,3 +20,21 @@
 
 > `axios`
 
+> `Recharts`
+
+- **测试及后端**
+
+> `Jest`
+
+> `Enzyme`
+
+> `JSONServer`
+
+> 文件使用 **Pascal Case** 命名法
+
+- 仅通过 `props` 接收数据和回调函数
+
+- 除非需要用到 `state` 生命周期函数或性能优化，通过写成 **函数式组件**
+
+> `containers` 文件夹存放所有的容器型组件
+

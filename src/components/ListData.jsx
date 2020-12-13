@@ -6,11 +6,11 @@ class ListData extends React.Component {
     return (
       <Fragment>
         <div className="alert alert-primary w-50 mt-20" role="alert">
-          A simple primary alert—check it out!
+          A simple primary !
           <img className="close" src={octaon} alt="删除"/>
         </div>
         <div className="alert alert-primary w-50" role="alert">
-          A simple primary alert—check it out!
+          A simple primary !
           <img className="close" src={octaon} alt="删除"/>
         </div>
       </Fragment>

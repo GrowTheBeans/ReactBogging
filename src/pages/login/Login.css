@@ -7,3 +7,7 @@ form {
   font-weight: bold;
   color: #0d6efd;
 }
+
+.github > span + img {
+  cursor: pointer;
+}
