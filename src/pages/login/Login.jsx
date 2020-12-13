@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import github from '../../img/github.svg';
+import {LogoOctocat} from '../../plugin/ionicons.js';
 import './Login.css';
 
 function Login() {
@@ -20,8 +20,8 @@ function Login() {
             <Link to="/signup" className="text-decoration-none">还没有账户？去注册一个新的吧！</Link>
           </div>
           <div className="col text-right github">
-            <span className="badge badge-light align-text-top">调转github注册页面</span>
-            <img width={20} src={github} className="align-text-top" alt="github" />
+            <LogoOctocat className="align-text-top" beat={true} fontSize="28px" color="#224b8f" />
+            <span className="badge badge-light">调转github注册页面</span>
           </div>
         </div>
       </div>
