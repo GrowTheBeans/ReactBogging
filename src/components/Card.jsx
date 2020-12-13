@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import axios from 'axios';
 import './index.css';
-
 class Card extends Component {
   constructor(props) {
     super(props)
@@ -9,6 +8,7 @@ class Card extends Component {
       list: []
     })
   }
+  // 
   componentDidMount() {
     axios.get('/api/columns').then(res => {
       if (res.data.code === 0) {
@@ -17,13 +17,13 @@ class Card extends Component {
           list: columnsList
         })
       }
+    }).catch(error => {
+      return error
     })
-      .catch(error => {
-        return error
-      })
   }
-  onColumnsList = () => {
-    console.log(23)
+  onColumnsList = (props) => {
+    console.log(props);
+    // pathname: this.props.history.push('/login')
   }
   render() {
     return (
@@ -39,7 +39,7 @@ class Card extends Component {
                   <div className="card-body card-description">
                     <p className="font-weight-light text-secondary">{item.description}</p>
                   </div>
-                  <button type="button" className="btn btn-outline-info btn-sm" onClick={this.onColumnsList}>进入专栏</button>
+                  <button type="button" className="btn btn-outline-info btn-sm" onClick={() => this.onColumnsList()}>进入专栏</button>
                 </div>
               </div>
             )

@@ -1,6 +1,8 @@
 function columnsList()  {
   return (
-    <h2>详情页</h2>
+    <h2>
+      <button>详情页面战术</button>
+    </h2>
   )
 }
 
