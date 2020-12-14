@@ -1,9 +1,11 @@
 import LogoOctocat from 'react-ionicons/lib/LogoOctocat';
 import LogoXbox from 'react-ionicons/lib/LogoXbox';
-import IosPricetagsOutline from 'react-ionicons/lib/IosPricetagsOutline';
+import IosCopy from 'react-ionicons/lib/IosCopy';
+import IosCloseCircleOutline from 'react-ionicons/lib/IosCloseCircleOutline';
 
 export {
+  IosCloseCircleOutline,
   LogoOctocat,
   LogoXbox,
-  IosPricetagsOutline
+  IosCopy
 }

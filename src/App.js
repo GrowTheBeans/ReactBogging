@@ -4,12 +4,17 @@ import Login from './pages/login/Login.jsx';
 import Signup from './pages/signup/Signup.jsx';
 import ColumnsList from './pages/ColumnsList/ColumnsList.jsx';
 import TodoList from './pages/TodoList/TodoList.jsx';
+import Create from './pages/create/index.jsx';
 import bg from './img/bg.svg';
-import {LogoXbox, IosPricetagsOutline} from './plugin/ionicons.js';
+import { LogoXbox, IosCopy } from './plugin/ionicons.js';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
 import './App.css';
 
 function App() {
+  function article() {
+    console.log(this.props);
+  }
   return (
     <Router className="container_box">
       <nav className="nav_container navbar-light justify-content-between">
@@ -45,10 +50,12 @@ function App() {
           <Route exact path="/">
             <div className="row">
               <div className="col-sm col-8 left">
-                <IosPricetagsOutline fontSize="18px" color="#4e72b8"/>
-                <Link to="/todolist" className="badge badge-pill badge-info">TODO展示</Link>
+                <p>
+                  <IosCopy fontSize="20px" color="#17a2b8" />
+                  <Link to="/todolist" className="badge badge-pill badge-info">TODO展示</Link>
+                </p>
                 <img className="bg" src={bg} alt="bg" />
-                <button type="button" className="btn btn-primary">写文章</button>
+                <button type="button" className="btn btn-primary" onClick={article}>写文章</button>
               </div>
               <div className="col-sm col-8">
                 <h3 className="content text-center">Table表格演示区域</h3>
@@ -69,6 +76,9 @@ function App() {
           </Route>
           <Route path="/todolist">
             <TodoList />
+          </Route>
+          <Route path="/create">
+            <Create />
           </Route>
         </Switch>
       </div>
