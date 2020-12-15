@@ -1,7 +1,7 @@
-function columnsList()  {
+function columnsList(props)  {
   return (
     <h2>
-      <button>详情页面战术</button>
+      {console.log(props)}
     </h2>
   )
 }

@@ -4,16 +4,16 @@ import Login from './pages/login/Login.jsx';
 import Signup from './pages/signup/Signup.jsx';
 import ColumnsList from './pages/ColumnsList/ColumnsList.jsx';
 import TodoList from './pages/TodoList/TodoList.jsx';
+import Loading from './components/Loading.jsx';
 import Create from './pages/create/index.jsx';
 import bg from './img/bg.svg';
 import { LogoXbox, IosCopy } from './plugin/ionicons.js';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-
+// import { withRouter } from 'react-router-dom';
 import './App.css';
-
 function App() {
   function article() {
-    console.log(this.props);
+    console.log(this);
   }
   return (
     <Router className="container_box">
@@ -50,7 +50,7 @@ function App() {
           <Route exact path="/">
             <div className="row">
               <div className="col-sm col-8 left">
-                <p>
+                <p className="title">
                   <IosCopy fontSize="20px" color="#17a2b8" />
                   <Link to="/todolist" className="badge badge-pill badge-info">TODO展示</Link>
                 </p>
@@ -65,21 +65,12 @@ function App() {
             <hr className="my-4"></hr>
             <Card />
           </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/signup">
-            <Signup />
-          </Route>
-          <Route path="/columns">
-            <ColumnsList />
-          </Route>
-          <Route path="/todolist">
-            <TodoList />
-          </Route>
-          <Route path="/create">
-            <Create />
-          </Route>
+          <Route path="/login" component={Login} />
+          <Route path="/signup" component={Signup} />
+          <Route path="/columns/:id" component={ColumnsList}/>
+          <Route path="/todolist" component={TodoList} />
+          <Route path="/create" component={Create} />
+          <Route path='/loading' component={Loading}/>
         </Switch>
       </div>
     </Router>

@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import { withRouter } from 'react-router-dom';
 import axios from 'axios';
 import './index.css';
 class Card extends Component {
@@ -21,9 +22,13 @@ class Card extends Component {
       return error
     })
   }
-  onColumnsList = (props) => {
-    console.log(props);
-    // pathname: this.props.history.push('/login')
+  onColumnsList = () => {
+    this.state.list.forEach(item => {
+      this.props.history.push({
+        pathname: `/columns/${item._id}`,
+        query: {columnId: item}
+      })
+    })
   }
   render() {
     return (
@@ -39,7 +44,7 @@ class Card extends Component {
                   <div className="card-body card-description">
                     <p className="font-weight-light text-secondary">{item.description}</p>
                   </div>
-                  <button type="button" className="btn btn-outline-info btn-sm" onClick={() => this.onColumnsList()}>进入专栏</button>
+                  <button type="button" className="btn btn-outline-info btn-sm" onClick={this.onColumnsList}>进入专栏</button>
                 </div>
               </div>
             )
@@ -50,4 +55,4 @@ class Card extends Component {
   }
 }
 
-export default Card;
+export default withRouter(Card);
