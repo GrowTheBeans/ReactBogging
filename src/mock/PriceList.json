@@ -16,6 +16,7 @@
     "dete": "2018-09-10",
     "category": {
       "id": "1",
+      "type": "imooc",
       "name": "旅游"
     }
   },
