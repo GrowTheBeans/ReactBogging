@@ -14,8 +14,8 @@ const PriceList = ({PriceList}) => {
             {item.price}元
           </span>
           <span className='col-2'>{item.dete}</span>
-          <button type="button" className="col-1 btn btn-outline-primary btn-sm" onClick={onEditorItem(33333)}>编辑</button>
-          <button type="button" className="col-1 btn btn-outline-danger btn-sm" onClick={onDeleteItem(444)}>删除</button>
+          <button type="button" className="col-1 btn btn-outline-primary btn-sm">编辑</button>
+          <button type="button" className="col-1 btn btn-outline-danger btn-sm">删除</button>
         </li>)
       }
     </ul>
