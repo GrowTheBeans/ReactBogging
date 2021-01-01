@@ -5,6 +5,7 @@ import Left from "../../img/arrow-left-square.svg";
 // import ListData from '../../components/ListData.jsx';
 import PriceList from "../../containers/Accounts/PriceList/price-list.jsx";
 import {IosCloseCircleOutline} from "../../plugin/ionicons";
+import {getStorage, setStorage} from '../../utils/Storage';
 
 class TodoList extends Component {
   state = {
@@ -17,24 +18,32 @@ class TodoList extends Component {
     })
   }
   addListItem = () => {
-    const {OnInputValue, todoList} = this.state
-    const _Obj = {
-      id: new Date().getTime(),
-      text: OnInputValue
-    }
-
-    todoList.push(_Obj)
+    const {OnInputValue} = this.state
+    // const _Obj = {
+    //   id: new Date().getTime(),
+    //   text: OnInputValue
+    // }
+    //
+    // todoList.push(_Obj)
 
     this.setState({
-      todoList
+      todoList: setStorage({
+        id: new Date().getTime(),
+        text: OnInputValue
+      })
+    })
+  }
+  componentDidMount() {
+    this.setState({
+      todoList: getStorage() || []
     })
   }
 
   removeListItem = (id) => {
-    const {todoList} = this.state
-    const newList = todoList.filter(item => item.id !== id)
+    // const {todoList} = this.state
+    // const newList = todoList.filter(item => item.id !== id)
     this.setState({
-      todoList: newList
+      todoList: setStorage(null, id)
     })
   }
 
