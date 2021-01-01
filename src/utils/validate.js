@@ -10,7 +10,4 @@ export function MailBox(mail) {
   return reg.test(mail)
 }
 
-export function ValueBox(value) {
-  const reg = /[^\a-\z\A-\Z0-9\u4E00-\u9FA5\@\.]/g;
-  return reg.test(value);
-}
+// 只能输入数字和文字

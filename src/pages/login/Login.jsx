@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import {LogoOctocat} from '../../plugin/ionicons.js';
+import { LogoOctocat } from '../../plugin/ionicons.js';
 import './Login.css';
 
 function Login() {
