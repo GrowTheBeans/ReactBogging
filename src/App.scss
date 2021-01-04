@@ -42,4 +42,31 @@
     border-radius: 18px;
     box-shadow: 0 4px 20px 0 rgb(28, 31, 33 / 100%);
   }
+
+  .nav-header {
+    position: relative;
+    top: -50px;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    z-index: 10;
+    background-color: #fff;
+    border-radius: 2px;
+    // box-shadow: 0 6px 10px 0 rgb(95, 101, 105 / 15%);
+    box-shadow: 0 4px 8px 0 #a9a9a9;
+
+    .nav-item {
+      display: inline-block;
+      .active {
+        color: #E02020;
+        font-weight: bold;
+        border-bottom: 2px solid #E02020;
+      }
+      a {
+        color: #545C63;
+        font-weight: bold;
+        font-size: 22px;
+      }
+    }
+  }
 }
