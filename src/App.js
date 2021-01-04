@@ -3,7 +3,7 @@ import Card from './components/Card.jsx';
 import Login from './pages/login/Login.jsx';
 import Signup from './pages/signup/Signup.jsx';
 import ColumnsList from './pages/ColumnsList/ColumnsList.jsx';
-import TodoList from './pages/TodoList/TodoList.jsx';
+import {TodoListHook} from './pages/TodoList/hook/TodoList.jsx';
 import Loading from './components/Loading.jsx';
 import Create from './pages/create/index.jsx';
 import bg from './img/bg.svg';
@@ -68,7 +68,7 @@ function App() {
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
           <Route path="/columns/:id" component={ColumnsList}/>
-          <Route path="/todolist" component={TodoList} />
+          <Route path="/todolist" component={TodoListHook} />
           <Route path="/create" component={Create} />
           <Route path='/loading' component={Loading}/>
         </Switch>
