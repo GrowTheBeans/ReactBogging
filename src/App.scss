@@ -1,0 +1,72 @@
+.App {
+  position: relative;
+  overflow: hidden;
+
+  .App_header {
+    position: relative;
+    z-index: 10;
+
+    img {
+      width: 100%;
+      height: 288px;
+    }
+
+    h2 {
+      position: absolute;
+      top: 100px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 40px;
+      color: #fff;
+      text-shadow: 0 2px 4px rgb(28, 31, 33 / 60%);
+    }
+
+    p {
+      position: absolute;
+      left: 50%;
+      top: 200px;
+      color: #545c63;
+      font-weight: 700;
+      font-size: 20px;
+      transform: translate(-50%, -50%);
+      text-shadow: 0 2px 4px #fff;
+    }
+  }
+
+  nav {
+    position: absolute;
+    bottom: 64px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-height: 128px;
+    border-radius: 18px;
+    box-shadow: 0 4px 20px 0 rgb(28, 31, 33 / 100%);
+  }
+
+  .nav-header {
+    position: relative;
+    top: -50px;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    z-index: 10;
+    background-color: #fff;
+    border-radius: 2px;
+    // box-shadow: 0 6px 10px 0 rgb(95, 101, 105 / 15%);
+    box-shadow: 0 4px 8px 0 #a9a9a9;
+
+    .nav-item {
+      display: inline-block;
+      .active {
+        color: #E02020;
+        font-weight: bold;
+        border-bottom: 2px solid #E02020;
+      }
+      a {
+        color: #545C63;
+        font-weight: bold;
+        font-size: 22px;
+      }
+    }
+  }
+}
